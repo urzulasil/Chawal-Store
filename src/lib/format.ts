@@ -8,3 +8,8 @@ export function formatPrice(amount: number): string {
   return formatter.format(amount);
 }
 
+export function getWeightSuffix(price: number): string {
+  if (price === 2199) return '/ 5kg';
+  if (price === 1399) return '/ 3kg';
+  return '/ kg';
+}

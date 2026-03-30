@@ -84,10 +84,10 @@ export default async function HomePage() {
           </div>
           <div className="text-sm sm:text-base text-gray-600 leading-relaxed text-center max-w-2xl mx-auto space-y-3">
             <p>
-              Khushboo se le kar lambe, ek dusre se alag daanon tak — URUZ UL ASIL ka har niwala behtareen quality ki pehchaan hai. Hamare chawal Sheikhupura ki zarkhiz zameenon se aate hain, jahan saalon ka tajurba aur mehnat milkar ek aise chawal ko janam deta hai jo apni misaal aap hai.
+              From its rich aroma to its long, perfectly separated grains — every bite of URUZ UL ASIL is a testament to uncompromised quality. Sourced from the fertile lands of Sheikhupura, our rice is the product of years of expertise and dedication, resulting in a grain that truly stands in a class of its own.
             </p>
             <p>
-              Kheton se aapki dastarkhwan tak, har qadam ehtiyaat aur muhabbat se mukammal kiya jata hai — taake aap ke ghar sirf woh chawal pohanche jo aap ki family ke layak ho. Kyunki achi quality aapka haq hai.
+              From the fields to your dining table, every step is handled with utmost care and love — ensuring that only the finest rice, worthy of your family, reaches your home. Because you deserve nothing less than the best.
             </p>
           </div>
         </div>

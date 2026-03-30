@@ -7,7 +7,7 @@ import { motion, type Variants } from 'framer-motion';
 import type { Product } from '@/types/database';
 import { createClient } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
-import { formatPrice } from '@/lib/format';
+import { formatPrice, getWeightSuffix } from '@/lib/format';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -107,7 +107,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
               {product.name}
             </h3>
             <p className="text-[#27ae60] font-semibold text-sm sm:text-base text-center">
-              {formatPrice(product.price_per_kg)} {product.price_per_kg === maxPrice ? '/ 5kg' : '/ kg'}
+              {formatPrice(product.price_per_kg)} {getWeightSuffix(product.price_per_kg)}
             </p>
             <motion.button
               type="button"

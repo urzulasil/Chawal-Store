@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { placeOrder } from '@/app/actions/orders';
 import type { CartItem } from '@/types/database';
-import { formatPrice } from '@/lib/format';
+import { formatPrice, getWeightSuffix } from '@/lib/format';
 
 export default function CheckoutForm() {
   const router = useRouter();
@@ -106,7 +106,7 @@ export default function CheckoutForm() {
                 <div className="min-w-0 flex-1">
                   <p className="font-medium text-gray-900 truncate">{item.name}</p>
                   <p className="text-gray-600">
-                    Qty: <span className="font-medium">{qty}</span> × {formatPrice(item.price)} / kg
+                    Qty: <span className="font-medium">{qty}</span> × {formatPrice(item.price)} {getWeightSuffix(item.price)}
                   </p>
                 </div>
                 <p className="shrink-0 font-semibold text-[#27ae60]">

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'sonner';
 import type { CartItem } from '@/types/database';
-import { formatPrice } from '@/lib/format';
+import { formatPrice, getWeightSuffix } from '@/lib/format';
 
 export default function CartView() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -74,7 +74,7 @@ export default function CartView() {
               <div className="min-w-0 flex-1">
                 <p className="font-medium text-sm sm:text-base truncate">{item.name}</p>
                 <p className="text-[#27ae60] font-semibold text-xs sm:text-sm">
-                  {formatPrice(item.price)} / kg
+                  {formatPrice(item.price)} {getWeightSuffix(item.price)}
                 </p>
                 <p className="mt-0.5 text-xs sm:text-sm text-gray-600">
                   Line total: {formatPrice(item.price * (item.quantity ?? 1))}
